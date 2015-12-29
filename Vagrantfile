@@ -33,6 +33,6 @@ Vagrant.configure(2) do |config|
   config.vm.provision "shell", inline: <<-SHELL
     sudo apt-get update
     sudo apt-get install -y vim screen git rsync python-dev python-setuptools python-pip git-core python-m2crypto
-    sudo install pyzmq PyYAML pycrypto msgpack-python jinja2 psutil
+    sudo pip install pyzmq PyYAML pycrypto msgpack-python jinja2 psutil
   SHELL
 end
