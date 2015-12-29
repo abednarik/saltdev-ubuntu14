@@ -34,3 +34,8 @@ in foreground in debug module
 Remember to accept minion keys after first minion run.
 
    salt-keys -A
+
+
+
+This is heavily based on [salt-vagrant-demo](https://github.com/UtahDave/salt-vagrant-demo) following
+official [Salt Development Docs](https://docs.saltstack.com/en/develop/topics/development/index.html)
