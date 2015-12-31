@@ -11,9 +11,8 @@ Vagrant.configure(2) do |config|
   config.vm.synced_folder "~/.vim", "/home/vagrant/.vim"
   config.vm.provision "file", source: "~/.vimrc", destination: ".vimrc"
   config.vm.provision "file", source: "~/.screenrc", destination: ".screenrc"
-  config.vm.synced_folder "saltstack/salt/", "/srv/salt"
-  config.vm.synced_folder "saltstack/pillar/", "/srv/pillar"
-  config.vm.synced_folder "saltstack/etc/", "/etc/salt"
+  config.vm.synced_folder "saltstack/srv", "/srv"
+  config.vm.synced_folder "saltstack/etc", "/etc/salt"
 
   config.vm.provision "shell" do |s|
     ssh_pub_key = File.readlines("#{Dir.home}/.ssh/id_rsa-abednarik_lespaul.pub").first.strip

@@ -10,7 +10,6 @@ Instructions
 Run the following commands in a terminal. Git, VirtualBox and Vagrant must
 already be installed.
 
-
     git clone git@github.com:abednarik/saltdev-ubuntu.git
     cd saltdev-ubuntu
 
@@ -23,18 +22,17 @@ Finally launch ubuntu instance
 Finally login as vagrant user and install salt using pip in editable module
 
     cd salt  
-    pip -e .
+    sudo pip install -e .
 
 For developing and debugging I use screen to run salt-master and salt-minion
-in foreground in debug module
+in foreground in error mode [ I mostly add log.error when I want to debug something ]
 
-    sudo salt-master -l debug
-    sudo salt-minion -l debug
+    sudo salt-master -l error
+    sudo salt-minion -l error
 
 Remember to accept minion keys after first minion run.
 
    salt-keys -A
-
 
 
 This is heavily based on [salt-vagrant-demo](https://github.com/UtahDave/salt-vagrant-demo) following
