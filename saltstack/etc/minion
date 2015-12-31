@@ -54,7 +54,7 @@ master: localhost
 #master_port: 4506
 
 # The user to run salt.
-#user: root
+user: root
 
 # Setting sudo_user will cause salt to run all execution modules under an sudo
 # to the user given in sudo_user.  The user under which the salt minion process
@@ -63,14 +63,14 @@ master: localhost
 #sudo_user: saltdev
 
 # Specify the location of the daemon process ID file.
-#pidfile: /var/run/salt-minion.pid
+pidfile: /var/run/salt-minion.pid
 
 # The root directory prepended to these options: pki_dir, cachedir, log_file,
 # sock_dir, pidfile.
 #root_dir: /
 
 # The directory to store the pki information in
-#pki_dir: /etc/salt/pki/minion
+pki_dir: /etc/salt/pki/minion
 
 # Explicitly declare the id for this minion to use, if left commented the id
 # will be the hostname as returned by the python call: socket.getfqdn()

@@ -1,1 +1,4 @@
 *.vagrant
+etc/*
+var/*
+saltstack/etc/pki/*

@@ -7,7 +7,7 @@ Vagrant.configure(2) do |config|
 
   config.vm.box_check_update = false
   config.vm.network "public_network", ip: "192.168.1.101", bridge: "en0: Wi-Fi (AirPort)"
-  config.vm.synced_folder "~/work/code/salt/salt", "/home/vagrant/salt"
+  config.vm.synced_folder "~/work/code/salt/salt", "/root/salt"
   config.vm.synced_folder "~/.vim", "/home/vagrant/.vim"
   config.vm.provision "file", source: "~/.vimrc", destination: ".vimrc"
   config.vm.provision "file", source: "~/.screenrc", destination: ".screenrc"
