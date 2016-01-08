@@ -34,6 +34,10 @@ Remember to accept minion keys after first minion run.
 
    salt-keys -A
 
+There is a placeholder state in /srv/salt called source.sls. Just put the content
+you want to test and run
+
+    salt ubuntu state.apply source
 
 This is heavily based on [salt-vagrant-demo](https://github.com/UtahDave/salt-vagrant-demo) following
 official [Salt Development Docs](https://docs.saltstack.com/en/develop/topics/development/index.html)
