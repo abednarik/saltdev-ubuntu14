@@ -2,3 +2,4 @@
 etc/*
 var/*
 saltstack/etc/pki/*
+saltstack/etc/minion.d*
