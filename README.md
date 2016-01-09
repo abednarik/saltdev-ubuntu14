@@ -1,7 +1,7 @@
 Salt Development Environment in Vagrant
 =======================================
 
-Personal Vagrantfile for SaltStack Development in Ubuntu 14 LTS
+Personal Vagrantfile for SaltStack Development in Ubuntu 14.
 
 
 Instructions
@@ -21,10 +21,12 @@ Finally launch ubuntu instance
 
 Finally login as vagrant user and install salt using pip in editable module
 
+    vagrant ssh
+    sudo su -
     cd salt  
-    sudo pip install -e .
+    pip install -e .
 
-For developing and debugging I use screen to run salt-master and salt-minion
+For developing and debugging I use tmux to run salt-master and salt-minion
 in foreground in error mode [ I mostly add log.error when I want to debug something ]
 
     sudo salt-master -l error
