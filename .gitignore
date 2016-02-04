@@ -1,5 +1,4 @@
 *.vagrant
-etc/*
-var/*
 saltstack/etc/pki/*
 saltstack/etc/minion.d*
+saltstack/etc/grains

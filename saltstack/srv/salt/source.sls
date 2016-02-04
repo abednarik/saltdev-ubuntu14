@@ -1,1 +1,4 @@
-## Put test case here and run: salt ubuntu state.apply source
+install-packages:
+  pkg.installed:
+    - pkgs:
+      - curl=7.35.0-1ubuntu2.6
