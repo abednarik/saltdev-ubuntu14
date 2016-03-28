@@ -10,8 +10,6 @@ Vagrant.configure(2) do |config|
   config.vm.synced_folder "saltstack/etc", "/etc/salt"
   
   ##  Personal config goes here.
-  # - network
-  config.vm.network "public_network", ip: "192.168.1.101", bridge: "en0: Wi-Fi (AirPort)"
   # - salt source code
   config.vm.synced_folder "~/work/code/salt/salt", "/root/salt"
   # - vim
@@ -20,7 +18,7 @@ Vagrant.configure(2) do |config|
 
 
   config.vm.provision "shell" do |s|
-    ssh_pub_key = File.readlines("#{Dir.home}/.ssh/id_rsa-abednarik_lespaul.pub").first.strip
+    ssh_pub_key = File.readlines("#{Dir.home}/.ssh/id_rsa.pub").first.strip
     s.inline = <<-SHELL
       echo #{ssh_pub_key} >> /home/vagrant/.ssh/authorized_keys
     SHELL
