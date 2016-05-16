@@ -3,7 +3,6 @@ Salt Development Environment in Vagrant
 
 Personal Vagrantfile for SaltStack Development in Ubuntu 14.
 
-
 Instructions
 ------------
 
@@ -39,7 +38,7 @@ Remember to accept minion keys after first minion run.
 There is a placeholder state in /srv/salt called source.sls. Just put the content
 you want to test and run
 
-    salt ubuntu state.apply source
+    salt 'salt' state.apply default
 
 This is heavily based on [salt-vagrant-demo](https://github.com/UtahDave/salt-vagrant-demo) following
 official [Salt Development Docs](https://docs.saltstack.com/en/develop/topics/development/index.html)
