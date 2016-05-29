@@ -7,11 +7,12 @@ Vagrant.configure(2) do |config|
 
   config.vm.synced_folder "saltstack/srv", "/srv"
   config.vm.synced_folder "saltstack/etc", "/etc/salt"
+  config.vm.synced_folder "~/work/code/salt/", "/root/salt"
 
   config.vm.provider "virtualbox" do |vb|
     vb.cpus = 2
     vb.memory = "2048"
-    vb.name = "salt"
+    vb.name = "saltdev-ubuntu"
   end
 
   config.vm.provision "shell", inline: <<-SHELL
