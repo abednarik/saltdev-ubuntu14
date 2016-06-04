@@ -38,10 +38,10 @@ in foreground in error mode [ I mostly add log.error when I want to debug someth
     sudo salt-minion -l error
     ```
 
-5. Remember to accept minion keys after first minion run.
+5. Check if everything went fine
 
     ```
-    salt-keys -A
+    salt '*' test.ping
     ```
 
 There is a placeholder state in /srv/salt called *default.sls*. Just put the content
